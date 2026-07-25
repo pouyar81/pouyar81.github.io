@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pouya Rezazadeh builds reliable software and data systems with a focus on clear structure, practical problem solving, and maintainable engineering."
+    />
+    <meta name="theme-color" content="#070913" />
+    <meta property="og:title" content="Pouya R. | Software & Data Engineer" />
+    <meta
+      property="og:description"
+      content="Reliable software, thoughtful data systems, and practical AI."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pouyar81.github.io/" />
+    <meta property="og:image" content="https://pouyar81.github.io/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://pouyar81.github.io/" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Pouya R. | Software & Data Engineer</title>
+    <script>
+      (() => {
+        const storedTheme = localStorage.getItem("portfolio-theme");
+        document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script type="module" src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" data-header>
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Pouya R, home">
+          <span class="brand-mark" aria-hidden="true">PR</span>
+          <span>Pouya R</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links" data-nav-links>
+          <li><a href="#work" data-nav-link>Work</a></li>
+          <li><a href="#skills" data-nav-link>Skills</a></li>
+          <li><a href="#about" data-nav-link>About</a></li>
+          <li><a href="#contact" data-nav-link>Contact</a></li>
+          <li>
+            <a
+              class="nav-resume"
+              href="./resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-resume-link
+            >
+              Résumé <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Switch to light theme"
+            title="Change color theme"
+          >
+            <span class="theme-icon" aria-hidden="true">◐</span>
+            <span class="theme-label">Theme</span>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Open navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="home" data-section>
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Software · Data · AI
+            </p>
+            <h1 class="reveal">
+              I build reliable
+              <span class="gradient-text">software and data systems.</span>
+            </h1>
+            <p class="hero-intro reveal">
+              I’m Pouya Rezazadeh, a developer interested in the space where software,
+              data, and practical AI meet. I enjoy turning unclear problems into useful
+              systems that are structured, maintainable, and easy to understand.
+            </p>
+
+            <div
+              class="role-line reveal"
+              aria-label="Roles: Software Developer, Data Engineer, and AI Engineer"
+            >
+              <span>Focus area</span>
+              <strong data-role-text aria-hidden="true">Software Developer</strong>
+            </div>
+
+            <div class="hero-actions reveal">
+              <a class="button button-primary" href="#work">
+                View selected work <span aria-hidden="true">↓</span>
+              </a>
+              <a
+                class="button button-secondary"
+                href="./resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-resume-link
+              >
+                Download résumé <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <dl class="hero-facts reveal">
+              <div>
+                <dt>Based in</dt>
+                <dd>Atlanta, GA</dd>
+              </div>
+              <div>
+                <dt>Selected work</dt>
+                <dd>3 projects</dd>
+              </div>
+              <div>
+                <dt>Approach</dt>
+                <dd>Clear · Reliable · Useful</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-stage reveal" data-hero-stage aria-hidden="true">
+            <div class="stage-glow stage-glow-one"></div>
+            <div class="stage-glow stage-glow-two"></div>
+
+            <div class="system-panel glass-panel" data-depth="1">
+              <div class="panel-bar">
+                <span class="panel-dots"><i></i><i></i><i></i></span>
+                <span>developer.profile</span>
+                <span>01</span>
+              </div>
+              <div class="system-code">
+                <p><span class="code-key">const</span> engineer = {</p>
+                <p class="indent"><span class="code-label">name:</span> "Pouya R.",</p>
+                <p class="indent"><span class="code-label">builds:</span> ["software", "data"],</p>
+                <p class="indent"><span class="code-label">values:</span> ["clarity", "reliability"],</p>
+                <p>};</p>
+              </div>
+              <div class="system-footer">
+                <span>System ready</span>
+                <span class="pulse-line"></span>
+              </div>
+            </div>
+
+            <div class="data-panel glass-panel" data-depth="2">
+              <div class="data-heading">
+                <span>Data flow</span>
+                <span>03 nodes</span>
+              </div>
+              <div class="data-flow">
+                <span>source</span><i></i><span>structure</span><i></i><span>system</span>
+              </div>
+              <div class="data-bars">
+                <i style="--size: 72%"></i>
+                <i style="--size: 48%"></i>
+                <i style="--size: 86%"></i>
+              </div>
+            </div>
+
+            <div class="opportunity-card glass-panel" data-depth="3">
+              <span class="opportunity-signal"></span>
+              <div>
+                <span>Open to</span>
+                <strong>Early-career engineering roles</strong>
+              </div>
+            </div>
+
+            <span class="tech-chip chip-python" data-depth="4">Python</span>
+            <span class="tech-chip chip-sql" data-depth="3">SQL</span>
+            <span class="tech-chip chip-java" data-depth="2">Java</span>
+          </div>
+        </div>
+
+        <div class="hero-rail" aria-hidden="true">
+          <div>
+            <span>SOFTWARE DEVELOPMENT</span><i></i>
+            <span>DATA ENGINEERING</span><i></i>
+            <span>AI ENGINEERING</span><i></i>
+            <span>DATABASE DEVELOPMENT</span><i></i>
+            <span>SOFTWARE DEVELOPMENT</span><i></i>
+            <span>DATA ENGINEERING</span><i></i>
+            <span>AI ENGINEERING</span><i></i>
+            <span>DATABASE DEVELOPMENT</span><i></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" data-section>
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Selected work</p>
+              <h2>Systems built around real problems.</h2>
+            </div>
+            <p>
+              A focused set of software and data projects showing how I approach
+              requirements, structure information, and work with a team.
+            </p>
+          </header>
+
+          <div class="projects-grid" data-projects-grid></div>
+          <noscript>
+            <p class="noscript-message">
+              JavaScript is required to display the interactive project case studies.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" data-section>
+        <div class="container">
+          <header class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Technical skills</p>
+              <h2>A practical engineering toolkit.</h2>
+            </div>
+            <p>
+              Organized by how I use each skill—from writing application logic to
+              structuring data and collaborating on delivery.
+            </p>
+          </header>
+
+          <div class="skills-shell reveal">
+            <div class="skill-tabs" role="tablist" aria-label="Skill categories" data-skill-tabs></div>
+            <div
+              class="skill-panel"
+              role="tabpanel"
+              tabindex="0"
+              aria-live="polite"
+              data-skill-panel
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" data-section>
+        <div class="about-grid container">
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame">
+              <img
+                src="./assets/images/pouya-portrait.webp"
+                alt="Portrait of Pouya Rezazadeh"
+                width="720"
+                height="960"
+                loading="lazy"
+              />
+            </div>
+            <div class="portrait-caption">
+              <span>Pouya Rezazadeh</span>
+              <span>Atlanta, Georgia</span>
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <p class="eyebrow">About</p>
+            <h2>Clear thinking before complex code.</h2>
+            <p class="about-lead">
+              I enjoy building software that makes information easier to work with.
+              My approach is to understand the problem, organize the data behind it,
+              and create a solution that is reliable without being unnecessarily
+              complicated.
+            </p>
+            <p>
+              Through collaborative application and database projects, I’ve gained
+              hands-on experience with Java, Python, SQL, C#, Git/GitHub, MySQL, and
+              AWS fundamentals. I’m completing my Computer Science degree at Kennesaw
+              State University and looking for an early-career engineering role where
+              I can contribute, learn from experienced teammates, and continue
+              building useful systems.
+            </p>
+
+            <dl class="about-details">
+              <div>
+                <dt>Education</dt>
+                <dd>B.S. Computer Science</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Software · Data · AI</dd>
+              </div>
+              <div>
+                <dt>Working style</dt>
+                <dd>Collaborative and structured</dd>
+              </div>
+              <div>
+                <dt>Currently</dt>
+                <dd>Open to opportunities</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" data-section>
+        <div class="contact-grid container">
+          <div class="contact-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something useful.</h2>
+          </div>
+          <div class="contact-copy reveal">
+            <p>
+              I’m open to software development, data, AI, and database opportunities
+              where I can contribute, learn, and help build reliable systems.
+            </p>
+            <a
+              class="contact-email"
+              href="mailto:Pooyarezazadeh81@gmail.com"
+              data-contact-email
+            >
+              <span>Pooyarezazadeh81@gmail.com</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="contact-links">
+              <a
+                href="https://github.com/pouyar81"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-contact-github
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/pouya-r"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-contact-linkedin
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="./resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-resume-link
+              >
+                Résumé <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-orbit" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner container">
+        <p>© <span data-year>2026</span> Pouya R</p>
+        <p>Designed for clarity. Built to evolve.</p>
+        <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
