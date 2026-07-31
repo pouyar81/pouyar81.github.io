@@ -18,7 +18,7 @@ export const projects = [
     id: "shopsync",
     title: "ShopSync E-Commerce System",
     organization: "Kennesaw State University",
-    date: "Mar 2026 – Present",
+    date: "Feb 2026 – May 2026",
     status: "Completed",
     summary:
       "A coordinated e-commerce application covering the customer journey from product discovery through checkout.",
@@ -40,7 +40,7 @@ export const projects = [
     id: "breaking-games",
     title: "SQL & Database Architecture",
     organization: "Breaking Games · Verified by Extern",
-    date: "2026",
+    date: "July 2026 - Aug 2026",
     status: "In progress",
     summary:
       "Transforming six disconnected CSV files into a structured analytics database and decision-ready Q4 dashboard.",
@@ -62,7 +62,7 @@ export const projects = [
     id: "sales-management",
     title: "Online Sales Management System",
     organization: "Kennesaw State University",
-    date: "Feb – Apr 2024",
+    date: "Feb 2024 – May 2024",
     status: "Completed",
     summary:
       "A database-driven sales management system delivered for a client within a two-month project timeline.",
@@ -90,6 +90,9 @@ export const skillCategories = [
     skills: [
       { name: "Java", mark: "JV" },
       { name: "Python", mark: "PY" },
+      { name: "JavaScript", mark: "JS" },
+      { name: "HTML", mark: "HTML" },
+      { name: "CSS", mark: "CSS" },
       { name: "SQL", mark: "SQL" },
       { name: "C#", mark: "C#" },
     ],
