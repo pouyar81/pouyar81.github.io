@@ -19,15 +19,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://pouyar81.github.io/" />
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <title>Pouya R. | Software & Data Engineer</title>
+    <title>Pouya R. | Software &amp; Data Engineer</title>
     <script>
       (() => {
-        const storedTheme = localStorage.getItem("portfolio-theme");
+        let storedTheme;
+        try { storedTheme = localStorage.getItem("portfolio-theme"); } catch {}
         document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
       })();
     </script>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script type="module" src="./assets/js/app.js"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css?v=20260917">
+    
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -47,7 +48,7 @@
           <li>
             <a
               class="nav-resume"
-              href="./resume.pdf"
+              href="./Pouya_Rezazadeh_Resume.pdf" download="Pouya_Rezazadeh_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               data-resume-link
@@ -94,11 +95,7 @@
               I build reliable
               <span class="gradient-text">software and data systems.</span>
             </h1>
-            <p class="hero-intro reveal">
-              I’m Pouya Rezazadeh, a developer interested in the space where software,
-              data, and practical AI meet. I enjoy turning unclear problems into useful
-              systems that are structured, maintainable, and easy to understand.
-            </p>
+            <p class="hero-intro reveal">I’m Pouya Rezazadeh, a Computer Science student at Kennesaw State University graduating in December 2026. I build cloud applications and data systems, and I’m exploring document intelligence through an ongoing AI externship.</p>
 
             <div
               class="role-line reveal"
@@ -114,7 +111,7 @@
               </a>
               <a
                 class="button button-secondary"
-                href="./resume.pdf"
+                href="./Pouya_Rezazadeh_Resume.pdf" download="Pouya_Rezazadeh_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-resume-link
@@ -130,7 +127,7 @@
               </div>
               <div>
                 <dt>Selected work</dt>
-                <dd>3 projects</dd>
+                <dd>4 projects</dd>
               </div>
               <div>
                 <dt>Approach</dt>
@@ -213,8 +210,7 @@
               <h2>Systems built around real problems.</h2>
             </div>
             <p>
-              A focused set of software and data projects showing how I approach
-              requirements, structure information, and work with a team.
+              From cloud commerce to document intelligence: selected work showing how I organize data, build applications, and lead teams.
             </p>
           </header>
 
@@ -281,82 +277,63 @@
               complicated.
             </p>
             <p>
-              Through collaborative application and database projects, I’ve gained
-              hands-on experience with Java, Python, SQL, C#, Git/GitHub, MySQL, and
-              AWS fundamentals. I’m completing my Computer Science degree at Kennesaw
-              State University and looking for an early-career engineering role where
-              I can contribute, learn from experienced teammates, and continue
-              building useful systems.
+              My experience spans leading a five-person e-commerce team, building a SQLite analytics database from six data sources, and developing OCR and retrieval workflows in the Extern Pfizer Program. I work with Python, SQL, Java, and AWS, with a focus on clear requirements, reliable data, and maintainable software.
             </p>
 
             <dl class="about-details">
               <div>
                 <dt>Education</dt>
-                <dd>B.S. Computer Science</dd>
+                <dd>B.S. Computer Science · Expected Dec 2026</dd>
               </div>
               <div>
-                <dt>Focus</dt>
-                <dd>Software · Data · AI</dd>
+                <dt>Academic recognition</dt>
+                <dd>President’s List · Spring 2025 &amp; Spring 2026</dd>
               </div>
               <div>
                 <dt>Working style</dt>
-                <dd>Collaborative and structured</dd>
+                <dd>Team leadership · Clear technical communication</dd>
               </div>
               <div>
                 <dt>Currently</dt>
-                <dd>Open to opportunities</dd>
+                <dd>Open to software &amp; data engineering roles</dd>
               </div>
-            </dl>
+            </dl><p class="experience-note">Previously, as a Retail Sales Consultant at AT&amp;T (Dec 2022–Feb 2023), I translated technical trade-offs into practical guidance and worked with teammates to resolve customer issues.</p>
           </div>
         </div>
       </section>
 
+
       <section class="section contact-section" id="contact" data-section>
         <div class="contact-grid container">
           <div class="contact-heading reveal">
-            <p class="eyebrow">Contact</p>
+            <p class="eyebrow">Contact me</p>
             <h2>Let’s build something useful.</h2>
-          </div>
-          <div class="contact-copy reveal">
-            <p>
-              I’m open to software development, data, AI, and database opportunities
-              where I can contribute, learn, and help build reliable systems.
-            </p>
-            <a
-              class="contact-email"
-              href="mailto:Pooyarezazadeh81@gmail.com"
-              data-contact-email
-            >
-              <span>Pooyarezazadeh81@gmail.com</span>
-              <span aria-hidden="true">↗</span>
-            </a>
+            <p class="contact-intro">Have an engineering opportunity, a project idea, or a question? Tell me what you have in mind.</p>
+            <a class="contact-email" href="mailto:pooyarezazadeh81@gmail.com" data-contact-email><span>pooyarezazadeh81@gmail.com</span><span aria-hidden="true">↗</span></a>
             <div class="contact-links">
-              <a
-                href="https://github.com/pouyar81"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-contact-github
-              >
-                GitHub <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/pouya-r"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-contact-linkedin
-              >
-                LinkedIn <span aria-hidden="true">↗</span>
-              </a>
-              <a
-                href="./resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-resume-link
-              >
-                Résumé <span aria-hidden="true">↗</span>
-              </a>
+              <a href="https://github.com/pouyar81" target="_blank" rel="noopener noreferrer" data-contact-github>GitHub ↗</a>
+              <a href="https://linkedin.com/in/pouya-r" target="_blank" rel="noopener noreferrer" data-contact-linkedin>LinkedIn ↗</a>
+              <a href="./Pouya_Rezazadeh_Resume.pdf" download="Pouya_Rezazadeh_Resume.pdf" data-resume-link>Résumé ↓</a>
             </div>
           </div>
+          <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/pooyarezazadeh81@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New portfolio message for Pouya">
+            <input type="hidden" name="_next" value="https://pouyar81.github.io/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-heading"><h3>Send a message</h3><span>Let’s connect</span></div>
+            <label for="contact-name">Your name <span class="optional">(optional)</span></label>
+            <input id="contact-name" name="name" autocomplete="name" placeholder="Your name" maxlength="100">
+            <label for="contact-email">Email address <span aria-hidden="true">*</span></label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+            <label for="contact-interest">I’m interested in <span aria-hidden="true">*</span></label>
+            <select id="contact-interest" name="interest" required><option value="">Select a topic</option><option>Hiring / engineering opportunity</option><option>Project collaboration</option><option>Question about my work</option><option>Something else</option></select>
+            <label for="contact-message">Your message <span aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="5" maxlength="5000" placeholder="A little about the opportunity or idea…" required></textarea>
+            <button class="button button-primary form-submit" type="submit">Send message <span aria-hidden="true">↗</span></button>
+            <p class="form-footnote">Your email lets me reply directly to you. Messages are delivered through FormSubmit.</p>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
         </div>
         <div class="contact-orbit" aria-hidden="true"></div>
       </section>
@@ -369,5 +346,6 @@
         <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
-  </body>
+  <script type="module" src="./assets/js/app.js?v=20260917"></script></body>
 </html>
+

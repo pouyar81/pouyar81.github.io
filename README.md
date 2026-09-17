@@ -1,120 +1,60 @@
 # Pouya R — Portfolio
 
-A recruiter-focused, single-page portfolio for Pouya Rezazadeh. The public site is
-plain HTML, CSS, and JavaScript, so it can run on GitHub Pages without a build
-process. The surrounding vinext project is used for local previewing and Sites
-hosting.
+Personal portfolio at https://pouyar81.github.io/. This repository is a static HTML,
+CSS, and JavaScript website served from the root of the `main` branch on GitHub
+Pages. No build dependencies or backend server are required.
 
-## Portfolio files
+## Files
 
-The complete static website lives in `public/`:
+- `index.html`: introduction, vertically stacked projects, skills, about, and contact.
+- `case-study-*.html`: four complete case studies hosted on this site.
+- `thanks.html`: return page after a successful contact-form submission.
+- `assets/js/content.js`: project summaries, skills, and contact links.
+- `assets/js/app.js`: project rendering, navigation, tabs, theme, and form feedback.
+- `assets/css/styles.css`: shared site styles and the main page layout.
+- `assets/css/case-study.css`: case-study layouts.
+- `assets/images/project-case-studies.png`: approved project-concept artwork.
+- `assets/images/pouya-portrait.webp`: portrait.
+- `Pouya_Rezazadeh_Resume.pdf`: current résumé and public download filename.
+- `resume.pdf`: identical current résumé retained for existing inbound links.
+- `favicon.png`, `og.png`: browser icon and social-sharing image.
 
-```text
-public/
-├── index.html
-├── assets/
-│   ├── css/styles.css
-│   ├── images/pouya-portrait.webp
-│   └── js/
-│       ├── content.js
-│       └── app.js
-├── favicon.png
-├── og.png
-├── resume.pdf
-└── .nojekyll
-```
+## Updating content
 
-All paths are relative so the same files work at a GitHub user site, a repository
-subpath, or a future custom domain.
+Edit project summaries and skills in `assets/js/content.js`. Keep each project ID
+unique. Case-study URLs use `./case-study-<name>.html`; edit the corresponding HTML
+page when changing detailed copy. External GitHub/live URLs must be full HTTPS
+URLs, or empty when unavailable. Artwork uses a four-panel sheet: ShopSync at
+`0% 0%`, Breaking Games at `100% 0%`, Pfizer at `0% 100%`, and Sales Management at
+`100% 100%`. These are clearly labeled concept illustrations, not product screenshots.
 
-## Update projects
+Replace both PDF files with the same new résumé to keep old links current. All
+visible download links use `Pouya_Rezazadeh_Resume.pdf` and its download attribute.
 
-Open `public/assets/js/content.js` and edit the `projects` array. To add a project,
-copy one object and update its values:
+## Contact delivery
 
-```js
-{
-  id: "unique-project-id",
-  title: "Project title",
-  organization: "Organization or context",
-  date: "Month Year",
-  status: "Completed",
-  summary: "One-sentence overview.",
-  problem: "The problem the work addressed.",
-  contribution: "Pouya's specific contribution.",
-  outcome: "The verified outcome or intended value.",
-  technologies: ["Technology", "Practice"],
-  featured: false,
-  visualType: "schema",
-  githubUrl: "",
-  liveUrl: "",
-  caseStudyUrl: "",
-  image: "",
-}
-```
+The form in `index.html` posts to FormSubmit for `pooyarezazadeh81@gmail.com`.
+Visitors supply their email, interest, and message; name is optional. The email
+field supplies the reply address. A honeypot and FormSubmit's default reCAPTCHA
+are enabled. The form works without JavaScript; JavaScript only provides sending
+feedback and limits duplicate clicks. Direct email remains available as a fallback.
 
-- Keep every `id` unique.
-- `visualType` accepts `commerce`, `pipeline`, or `schema`.
-- `githubUrl`, `liveUrl`, `caseStudyUrl`, and `image` are optional.
-- Leave an optional value empty when it does not exist. The site will not render an
-  empty or disabled control.
-- Use complete `https://` URLs for external project links.
+The first real submission triggers a confirmation email from FormSubmit. The
+recipient must click the activation link in that email before delivery can work.
+Check Spam if it is missing, then send a test and verify receipt. After activation,
+submissions return to `https://pouyar81.github.io/thanks.html`. Update `_next` in the
+form if the domain changes. Do not put inbox passwords or mail-provider secrets
+in the repository. See https://formsubmit.co/documentation for service settings.
 
-## Update skills
+## Local preview and publishing
 
-Edit the `skillCategories` array in `public/assets/js/content.js`.
+Run a static server in the repository root, such as `python -m http.server 8765`,
+and open `http://localhost:8765/`. The contact form is live even during local
+preview, so submit only when intentionally testing delivery.
 
-- Add a skill as `{ name: "Skill name", mark: "AB" }`.
-- Keep marks short because they are displayed like compact technical labels.
-- To add a category, copy one category object and give it a unique `id`.
-- The tabs and keyboard behavior update automatically from the data.
-
-## Update contact links
-
-The verified contact details are stored near the top of
-`public/assets/js/content.js`. Update the values there; the visible links are applied
-automatically when the page loads.
-
-## Replace the résumé
-
-Replace `public/resume.pdf` with the new PDF and keep the same filename. All résumé
-links will continue to work.
-
-## Replace the portrait
-
-Replace `public/assets/images/pouya-portrait.webp` with a web-optimized portrait and
-keep the same filename. A 3:4 image around 720 × 960 pixels is a good target. Update
-the image `alt` text in `public/index.html` if the subject or context changes.
-
-## Update social sharing and domain details
-
-- Replace `public/og.png` to change the social preview.
-- Replace `public/favicon.png` to change the browser icon.
-- Update the canonical URL and Open Graph URL in `public/index.html` after connecting
-  a custom domain.
-
-## Preview and verify
-
-With the project dependencies installed:
-
-```bash
-npm run dev
-npm test
-```
-
-The local preview is normally available at `http://localhost:3000/`. The automated
-checks verify the static assets, centralized content model, accessible interactions,
-theme support, and GitHub Pages-safe paths.
-
-## Publish on GitHub Pages
-
-1. Put the **contents** of `public/` at the root of your GitHub Pages repository.
-2. In the repository, open **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)`, then save.
-5. GitHub will publish the site at `https://pouyar81.github.io/` for a repository
-   named `pouyar81.github.io`, or at a repository subpath for another repository
-   name.
-
-If a custom domain is connected later, keep `.nojekyll` and follow GitHub’s DNS
-instructions before enabling **Enforce HTTPS**.
+Push changes to `main`. Existing GitHub Pages settings publish the root directory.
+Verify the Pages deployment succeeds, then inspect desktop/mobile layouts, the
+four local case-study links, résumé download, and contact delivery. When changing
+shared assets, update their query-string version in HTML and module imports to
+avoid stale browser caches. Update canonical/Open Graph URLs and the form return
+URL if moving to a different domain.
