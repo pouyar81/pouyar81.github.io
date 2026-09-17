@@ -1,4 +1,4 @@
-import { projects, siteContent, skillCategories } from "./content.js";
+import { projects, siteContent, skillCategories } from "./content.js?v=20260917";
 
 const root = document.documentElement;
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -27,71 +27,18 @@ function safeExternalUrl(value) {
   }
 }
 
-function projectVisual(type) {
-  if (type === "commerce") {
-    return `
-      <div class="project-visual visual-commerce" aria-hidden="true">
-        <div class="visual-label"><span>commerce.flow</span><span>03 steps</span></div>
-        <div class="commerce-flow">
-          <span><i>01</i>Browse</span><b></b>
-          <span><i>02</i>Cart</span><b></b>
-          <span><i>03</i>Checkout</span>
-        </div>
-        <div class="commerce-data"><i></i><i></i><i></i><i></i><i></i></div>
-      </div>`;
-  }
-
-  if (type === "pipeline") {
-    return `
-      <div class="project-visual visual-pipeline" aria-hidden="true">
-        <div class="visual-label"><span>data.pipeline</span><span>processing</span></div>
-        <div class="pipeline-flow">
-          <div><span>CSV</span><span>6 sources</span></div>
-          <i></i>
-          <div><span>SQL</span><span>structured</span></div>
-          <i></i>
-          <div><span>Q4</span><span>insight</span></div>
-        </div>
-        <div class="pipeline-wave"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </div>`;
-  }
-
-  return `
-    <div class="project-visual visual-schema" aria-hidden="true">
-      <div class="visual-label"><span>relational.schema</span><span>normalized</span></div>
-      <div class="schema-grid">
-        <div><strong>customer</strong><span>customer_id</span><span>account</span></div>
-        <i></i>
-        <div><strong>order</strong><span>order_id</span><span>customer_id</span></div>
-        <i></i>
-        <div><strong>product</strong><span>product_id</span><span>inventory</span></div>
-      </div>
-    </div>`;
-}
-
 function projectLinks(project) {
+  const internalUrl = /^\.\/case-study-[a-z0-9-]+\.html$/.test(project.caseStudyUrl) ? project.caseStudyUrl : "";
   const links = [
-    { label: "GitHub", url: safeExternalUrl(project.githubUrl) },
-    { label: "Live site", url: safeExternalUrl(project.liveUrl) },
-    { label: "Case study", url: safeExternalUrl(project.caseStudyUrl) },
-  ].filter((item) => item.url);
-
+    { label: "GitHub", url: safeExternalUrl(project.githubUrl), external: true },
+    { label: "Live site", url: safeExternalUrl(project.liveUrl), external: true },
+    { label: "Read case study", url: internalUrl, external: false },
+  ].filter(item => item.url);
   if (!links.length) return "";
-
-  return `
-    <div class="project-links">
-      ${links
-        .map(
-          (link) => `
-            <a href="${escapeHTML(link.url)}" target="_blank" rel="noopener noreferrer">
-              ${escapeHTML(link.label)} <span aria-hidden="true">↗</span>
-            </a>`
-        )
-        .join("")}
-    </div>`;
+  return `<div class="project-links">${links.map(link => `<a href="${escapeHTML(link.url)}" ${link.external ? 'target="_blank" rel="noopener noreferrer"' : ''}>${escapeHTML(link.label)} <span aria-hidden="true">${link.external ? '↗' : '→'}</span></a>`).join("")}</div>`;
 }
 
-export function renderProjects() {
+function renderProjects() {
   const grid = document.querySelector("[data-projects-grid]");
   if (!grid) return;
 
@@ -105,7 +52,7 @@ export function renderProjects() {
             <span class="project-status">${escapeHTML(project.status)}</span>
           </div>
 
-          ${project.image ? `<img class="project-image" src="${escapeHTML(project.image)}" alt="" />` : projectVisual(project.visualType)}
+          <div class="project-art" role="img" aria-label="${escapeHTML(project.title)} — illustrative project concept" style="--art-position:${project.quadrant}"></div>
 
           <div class="project-body">
             <p class="project-date">${escapeHTML(project.date)}</p>
@@ -131,7 +78,7 @@ export function renderProjects() {
                   <p>${escapeHTML(project.contribution)}</p>
                 </div>
                 <div>
-                  <span>Outcome</span>
+                  <span>${project.status === "In progress" ? "Current focus" : "Outcome"}</span>
                   <p>${escapeHTML(project.outcome)}</p>
                 </div>
               </div>
@@ -244,7 +191,7 @@ function initTheme() {
   updateThemeControl();
   toggle.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
-    localStorage.setItem("portfolio-theme", root.dataset.theme);
+    try { localStorage.setItem("portfolio-theme", root.dataset.theme); } catch {}
     updateThemeControl();
   });
 }
@@ -424,3 +371,26 @@ function init() {
 }
 
 init();
+
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+  const button = form?.querySelector('[type="submit"]');
+  const status = document.getElementById("form-status");
+  if (!form || !button || !status) return;
+  const originalLabel = button.innerHTML;
+  const reset = () => {
+    button.disabled = false;
+    button.innerHTML = originalLabel;
+    status.textContent = "";
+  };
+  form.addEventListener("submit", () => {
+    button.disabled = true;
+    button.textContent = "Opening secure form…";
+    status.textContent = "Complete the spam check on the next page to send your message.";
+    // Keep retrying possible if the network navigation cannot complete.
+    window.setTimeout(reset, 15000);
+  });
+  window.addEventListener("pageshow", reset);
+}
+initContactForm();
+

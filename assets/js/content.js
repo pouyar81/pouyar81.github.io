@@ -1,144 +1,51 @@
-/*
- * This is the main content file for the portfolio.
- * Add future projects and skills here; the page layout updates automatically.
- */
-
-export const siteContent = {
+const siteContent = {
   roles: ["Software Developer", "Data Engineer", "AI Engineer"],
-  contact: {
-    email: "Pooyarezazadeh81@gmail.com",
-    github: "https://github.com/pouyar81",
-    linkedin: "https://linkedin.com/in/pouya-r",
-    resume: "./resume.pdf",
-  },
+  contact: {email:"pooyarezazadeh81@gmail.com", github:"https://github.com/pouyar81", linkedin:"https://linkedin.com/in/pouya-r", resume:"./Pouya_Rezazadeh_Resume.pdf"}
 };
-
-export const projects = [
+const projects = [
   {
-    id: "shopsync",
-    title: "ShopSync E-Commerce System",
-    organization: "Kennesaw State University",
-    date: "Feb 2026 – May 2026",
-    status: "Completed",
-    summary:
-      "A coordinated e-commerce application covering the customer journey from product discovery through checkout.",
-    problem:
-      "Translate shared project requirements into dependable commerce features while keeping a five-person team aligned.",
-    contribution:
-      "Developed three core workflows—product browsing, cart management, and checkout—and managed collaborative code changes through Git and GitHub.",
-    outcome:
-      "Built the project’s primary customer journey while contributing within the team’s shared Git/GitHub workflow.",
-    technologies: ["Git/GitHub", "AWS S3", "Requirements Analysis", "Team Collaboration"],
-    featured: true,
-    visualType: "commerce",
-    githubUrl: "",
-    liveUrl: "",
-    caseStudyUrl: "",
-    image: "",
+    id:"pfizer", title:"AI Document Intelligence", organization:"Extern · Pfizer Program", date:"Aug 2026 – Present", status:"In progress",
+    summary:"Building a Python pipeline to turn scanned and digital pharmaceutical vendor documents into structured, searchable information.",
+    problem:"Extract and classify information from varied enterprise PDFs, then make the relevant content easier to retrieve.",
+    contribution:"Implementing and evaluating Tesseract and PaddleOCR workflows, and developing retrieval with LlamaIndex, vector search, text chunking, and large language models. Earlier research explains tokenization, training, and next-token prediction.",
+    outcome:"Currently evaluating OCR accuracy, retrieval quality, and routing performance while documenting model trade-offs and deployment recommendations.",
+    technologies:["Python","Tesseract / PaddleOCR","LlamaIndex","RAG","Vector Search"], featured:true, visualType:"documents", quadrant:"0% 100%", githubUrl:"",liveUrl:"",
+    caseStudyUrl:"./case-study-pfizer.html",image:""
   },
   {
-    id: "breaking-games",
-    title: "SQL & Database Architecture",
-    organization: "Breaking Games · Verified by Extern",
-    date: "July 2026 - Aug 2026",
-    status: "In progress",
-    summary:
-      "Transforming six disconnected CSV files into a structured analytics database and decision-ready Q4 dashboard.",
-    problem:
-      "Make fragmented sales data consistent, queryable, and useful for business analysis.",
-    contribution:
-      "Working through schema design, data cleaning, SQL analysis, and the translation of findings into clear data stories.",
-    outcome:
-      "Building a reliable data foundation intended to support Q4 analysis and clearer business decisions.",
-    technologies: ["SQL", "Database Design", "Data Analysis", "Data Storytelling"],
-    featured: true,
-    visualType: "pipeline",
-    githubUrl: "",
-    liveUrl: "",
-    caseStudyUrl: "",
-    image: "",
+    id:"breaking-games",title:"E-Commerce Analytics & Database Architecture",organization:"Extern · Breaking Games",date:"Jul 2026 – Aug 2026",status:"Completed",
+    summary:"Connected six e-commerce data sources into a SQLite database and an interactive dashboard for marketing and inventory decisions.",
+    problem:"Unify fragmented sales, marketing, and checkout data so the business can assess product performance and prepare for Q4.",
+    contribution:"Built an ETL workflow, standardized product identifiers with a dim_product table, and wrote INNER and LEFT JOIN queries. Analyzed marketing attribution across 400+ referral sources, cleaned channel categories, and filtered bots and invalid checkout records.",
+    outcome:"Built and presented an HTML/Chart.js dashboard and Holiday Game Plan with inventory reorder and marketing-priority recommendations. Recalculated cart-abandonment metrics after filtering noise and aligning comparison periods.",
+    technologies:["SQL / SQLite","ETL","Data Modeling","Chart.js","Marketing Attribution"],featured:true,visualType:"pipeline",quadrant:"100% 0%",githubUrl:"",liveUrl:"",
+    caseStudyUrl:"./case-study-breaking-games.html",image:""
   },
   {
-    id: "sales-management",
-    title: "Online Sales Management System",
-    organization: "Kennesaw State University",
-    date: "Feb 2024 – May 2024",
-    status: "Completed",
-    summary:
-      "A database-driven sales management system delivered for a client within a two-month project timeline.",
-    problem:
-      "Give the client a more consistent way to store, organize, and retrieve sales information.",
-    contribution:
-      "Led a four-person team through requirements, implementation, and testing while applying relational modeling and normalization.",
-    outcome:
-      "Delivered a structured MySQL solution that improved the consistency of sales-data storage and retrieval.",
-    technologies: ["SQL", "MySQL", "Relational Modeling", "Normalization"],
-    featured: false,
-    visualType: "schema",
-    githubUrl: "",
-    liveUrl: "",
-    caseStudyUrl: "",
-    image: "",
+    id:"shopsync",title:"ShopSync E-Commerce System",organization:"Kennesaw State University",date:"Feb 2026 – May 2026",status:"Completed",
+    summary:"Led a five-person team to deliver a database-driven e-commerce system in four months, from requirements through implementation and testing.",
+    problem:"Turn shared requirements into a coordinated shopping experience with consistent relational data and a dependable cloud setup.",
+    contribution:"Developed product browsing, cart, and checkout workflows. Deployed services on AWS EC2, managed data in RDS, automated tasks with Lambda, served assets from S3, and coordinated code changes through Git/GitHub.",
+    outcome:"Delivered the core customer journey and designed normalized SQL models to improve data consistency and retrieval reliability.",
+    technologies:["Java","JavaScript","MySQL","AWS EC2 / RDS","AWS Lambda / S3"],featured:false,visualType:"commerce",quadrant:"0% 0%",githubUrl:"",liveUrl:"",
+    caseStudyUrl:"./case-study-shopsync.html",image:""
   },
+  {
+    id:"sales-management",title:"Online Sales Management System",organization:"Kennesaw State University",date:"Feb 2024 – May 2024",status:"Completed",
+    summary:"Delivered a database-driven sales management system for one client within a two-month project timeline.",
+    problem:"Give the client a consistent way to store, organize, and retrieve sales information.",
+    contribution:"Led a four-person team through requirements, implementation, and testing, applying SQL/MySQL, relational modeling, and normalization.",
+    outcome:"Delivered a structured MySQL solution that improved the consistency of sales-data storage and retrieval.",
+    technologies:["SQL","MySQL","Relational Modeling","Normalization"],featured:false,visualType:"schema",quadrant:"100% 100%",githubUrl:"",liveUrl:"",
+    caseStudyUrl:"./case-study-sales-management.html",image:""
+  }
+];
+const skillCategories = [
+  {id:"languages",label:"Languages",description:"Languages for application logic, web interfaces, and database queries.",skills:[{name:"Python",mark:"PY"},{name:"SQL",mark:"SQL"},{name:"Java",mark:"JV"},{name:"C#",mark:"C#"},{name:"JavaScript",mark:"JS"},{name:"HTML",mark:"HTML"},{name:"CSS",mark:"CSS"}]},
+  {id:"ai",label:"AI & Documents",description:"Tools and concepts I’m applying in my ongoing document-intelligence externship.",skills:[{name:"Retrieval-Augmented Generation",mark:"RAG"},{name:"LlamaIndex",mark:"LI"},{name:"Vector Search",mark:"VS"},{name:"Tesseract",mark:"TS"},{name:"PaddleOCR",mark:"PO"},{name:"Optical Character Recognition",mark:"OCR"},{name:"Large Language Models",mark:"LLM"},{name:"Text Chunking",mark:"TC"},{name:"Data Extraction",mark:"DE"},{name:"Document Classification",mark:"DC"}]},
+  {id:"data",label:"Data & Analytics",description:"Building reliable data foundations and explaining what the data shows.",skills:[{name:"MySQL",mark:"MY"},{name:"SQLite",mark:"SQ"},{name:"ETL Workflows",mark:"ETL"},{name:"Data Modeling",mark:"DM"},{name:"Relational Databases",mark:"DB"},{name:"Database Normalization",mark:"NF"},{name:"Pandas",mark:"PD"},{name:"NumPy",mark:"NP"},{name:"Matplotlib",mark:"MP"},{name:"scikit-learn",mark:"SK"},{name:"Chart.js",mark:"CH"},{name:"Data Analysis",mark:"DA"},{name:"Data Storytelling",mark:"DS"}]},
+  {id:"tools",label:"Cloud & Tools",description:"The platforms behind application deployment, automation, and collaboration.",skills:[{name:"AWS S3",mark:"S3"},{name:"AWS EC2",mark:"EC2"},{name:"AWS RDS",mark:"RDS"},{name:"AWS Lambda",mark:"AWS"},{name:"Git / GitHub",mark:"GT"},{name:"GitHub Actions",mark:"GA"},{name:"Linux",mark:"LX"}]},
+  {id:"practices",label:"Engineering Practices",description:"Methods for leading teams and delivering clear, maintainable systems.",skills:[{name:"Software Development Lifecycle",mark:"SDLC"},{name:"Object-Oriented Programming",mark:"OO"},{name:"Requirements Analysis",mark:"RA"},{name:"Automated Testing",mark:"QA"},{name:"Code Review",mark:"CR"},{name:"CI/CD",mark:"CI"},{name:"Debugging",mark:"DB"},{name:"Technical Documentation",mark:"TD"},{name:"Agile / Scrum",mark:"AG"},{name:"Team Collaboration",mark:"TC"},{name:"Unity",mark:"UN"}]}
 ];
 
-export const skillCategories = [
-  {
-    id: "languages",
-    label: "Languages",
-    description: "Languages I use to express application logic, queries, and systems.",
-    skills: [
-      { name: "Java", mark: "JV" },
-      { name: "Python", mark: "PY" },
-      { name: "JavaScript", mark: "JS" },
-      { name: "HTML", mark: "HTML" },
-      { name: "CSS", mark: "CSS" },
-      { name: "SQL", mark: "SQL" },
-      { name: "C#", mark: "C#" },
-    ],
-  },
-  {
-    id: "software",
-    label: "Software Development",
-    description: "Core practices for building, testing, and improving applications.",
-    skills: [
-      { name: "Object-Oriented Programming", mark: "OO" },
-      { name: "Software Testing & Debugging", mark: "QA" },
-      { name: "Requirements Analysis", mark: "RA" },
-      { name: "Unity", mark: "UN" },
-    ],
-  },
-  {
-    id: "data",
-    label: "Data & Databases",
-    description: "Tools and concepts for turning structured information into useful systems.",
-    skills: [
-      { name: "MySQL", mark: "MY" },
-      { name: "Relational Databases", mark: "DB" },
-      { name: "Data Modeling", mark: "DM" },
-      { name: "Database Normalization", mark: "NF" },
-      { name: "Data Analysis", mark: "DA" },
-    ],
-  },
-  {
-    id: "tools",
-    label: "Cloud & Tools",
-    description: "The development environment and delivery tools behind the work.",
-    skills: [
-      { name: "Git/GitHub", mark: "GT" },
-      { name: "Linux", mark: "LX" },
-      { name: "AWS S3", mark: "S3" },
-    ],
-  },
-  {
-    id: "practices",
-    label: "Engineering Practices",
-    description: "The habits that keep technical work clear and collaborative.",
-    skills: [
-      { name: "Agile/Scrum", mark: "AG" },
-      { name: "Technical Documentation", mark: "TD" },
-      { name: "Team Collaboration", mark: "TC" },
-      { name: "Problem Solving", mark: "PS" },
-    ],
-  },
-];
+export { projects, siteContent, skillCategories };
