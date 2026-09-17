@@ -1,8 +1,38 @@
-# Pouya R — Portfolio
+# Pouya Rezazadeh — Portfolio
 
-Personal portfolio at https://pouyar81.github.io/. This repository is a static HTML,
-CSS, and JavaScript website served from the root of the `main` branch on GitHub
-Pages. No build dependencies or backend server are required.
+A responsive portfolio presenting my software development, data engineering, and document-intelligence work.
+
+**[View the live portfolio](https://pouyar81.github.io/)** · [Download my résumé](https://pouyar81.github.io/Pouya_Rezazadeh_Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/pouya-r/)
+
+## Explore the projects
+
+| Project | Focus | Case study |
+| --- | --- | --- |
+| ShopSync | E-commerce team project with a public HTML/CSS/JavaScript frontend | [Read](https://pouyar81.github.io/case-study-shopsync.html) |
+| Breaking Games through Extern | Six-source ETL, SQLite analytics, and a Chart.js dashboard | [Read](https://pouyar81.github.io/case-study-breaking-games.html) |
+| Pfizer program through Extern | Ongoing Python OCR and retrieval experiments | [Read](https://pouyar81.github.io/case-study-pfizer.html) |
+| Sales Management System | Client requirements, relational modeling, and MySQL | [Read](https://pouyar81.github.io/case-study-sales-management.html) |
+
+This repository contains the portfolio website and case studies. Each case study explains the project context, my contribution, tools, and outcomes.
+
+ShopSync's frontend code is available in the [team repository](https://github.com/Rachel-Emerald/Group-5-ShopSync).
+
+## Website features
+
+- Responsive layouts with projects presented one after another.
+- Four case studies hosted within the portfolio.
+- Downloadable résumé and a contact form delivered through FormSubmit.
+- Static HTML, CSS, and JavaScript deployed through GitHub Pages.
+
+## Run locally
+
+From the repository root, start a static server:
+
+```sh
+python -m http.server 8765
+```
+
+Open [localhost:8765](http://localhost:8765/). No build dependencies or backend server are required. The contact form sends real messages, including during local preview.
 
 ## Files
 
